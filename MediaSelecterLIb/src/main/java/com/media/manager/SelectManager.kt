@@ -12,12 +12,13 @@ import kotlin.collections.HashMap
  * yuxiu
  * 2021/8/27
  **/
-class SelectManager{
+class SelectManager {
     companion object {
         @Volatile
         private var selectFolder: HashMap<Long, Int>? = null
+
         @Volatile
-        private var selectList: HashMap<Long,LocalMedia>? = null
+        private var selectList: HashMap<Long, LocalMedia>? = null
         private var selectId: String = ""
         private var selectChangeObservable: SelectChangeObservable = SelectChangeObservable()
 
@@ -32,13 +33,15 @@ class SelectManager{
 //                }
                 manager ?: SelectManager().also { manager = it }
             }
+
         fun getSelectFolder() =
-             selectFolder ?: synchronized(this) {
+            selectFolder ?: synchronized(this) {
                 selectFolder ?: HashMap<Long, Int>().also { selectFolder = it }
             }
+
         fun getSelectList() =
             selectList ?: synchronized(this) {
-                selectList ?:HashMap<Long,LocalMedia>().also { selectList = it }
+                selectList ?: HashMap<Long, LocalMedia>().also { selectList = it }
             }
 
         fun destroy() {
@@ -66,38 +69,36 @@ class SelectManager{
 
     fun addMedia(media: LocalMedia) {
 
-                  val a=  getSelectList().put(media.id,media)
+        val a = getSelectList().put(media.id, media)
 
-                        selectId += "${media.id};"
-                        if (getSelectFolder().containsKey(media.bucketId)) {
-                            getSelectFolder().get(media.bucketId)?.let {
-                                getSelectFolder().put(media.bucketId, it + 1)
-                            }
-                        } else {
-                            getSelectFolder().put(media.bucketId, 1)
-                        }
-                        notifyChange(false)
-
-
+        selectId += "${media.id};"
+        if (getSelectFolder().containsKey(media.bucketId)) {
+            getSelectFolder().get(media.bucketId)?.let {
+                getSelectFolder().put(media.bucketId, it + 1)
+            }
+        } else {
+            getSelectFolder().put(media.bucketId, 1)
+        }
+        notifyChange(false)
 
 
     }
 
     fun removeMedia(media: LocalMedia) {
-                     getSelectList().remove(media.id)
-                     selectId= selectId.replace("${media.id};", "")
-                        if (getSelectFolder().containsKey(media.bucketId)) {
-                            getSelectFolder().get(media.bucketId)?.let {
-                                getSelectFolder().put(media.bucketId, it - 1)
-                            }
-                        }
-                        notifyChange(false)
+        getSelectList().remove(media.id)
+        selectId = selectId.replace("${media.id};", "")
+        if (getSelectFolder().containsKey(media.bucketId)) {
+            getSelectFolder().get(media.bucketId)?.let {
+                getSelectFolder().put(media.bucketId, it - 1)
+            }
+        }
+        notifyChange(false)
 
     }
 
     fun getIdIndex(id: String): Int {
         selectId?.let { selectId ->
-            if(selectId.contains("${id};")) {
+            if (selectId.contains("${id};")) {
                 var arr = selectId.split(";")
                 for ((index, str) in arr.withIndex()) {
                     if (id == str) {

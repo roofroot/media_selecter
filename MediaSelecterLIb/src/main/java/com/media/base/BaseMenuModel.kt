@@ -62,6 +62,9 @@ abstract class BaseMenuModel<T : ViewBinding>{
             }
         }
     }
+    fun isMunuShow():Boolean{
+        return constraintLayout.childCount>0
+    }
     fun showMenu(){
         if( constraintLayout.childCount>0){
             return

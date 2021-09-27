@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="500"
+    android:propertyName="fillColor"
+    android:repeatCount="0"
+    android:valueFrom="@color/ic_close_color"
+    android:valueTo="@color/transparent"
+    android:valueType="colorType" />
+

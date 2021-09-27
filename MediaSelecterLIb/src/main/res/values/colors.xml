@@ -18,4 +18,8 @@
     <color name="text_color_trans_dark">#dd393a3e</color>
     <color name="text_color_dark">#4d4d4d</color>
     <color name="default_background_color">#fff</color>
+    <color name="select_text_color">#FFFFFFFF</color>
+    <color name="select_bg_color">#FF03DAC5</color>
+    <color name="arrow_color">#FF03DAC5</color>
+    <color name="ic_close_color">#FF03DAC5</color>
 </resources>

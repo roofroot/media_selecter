@@ -17,11 +17,11 @@
     <TextView
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:padding="10dp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
+        android:layout_width="@dimen/select_check_size"
+        android:layout_height="@dimen/select_check_size"
+        android:layout_margin="@dimen/select_check_text_size"
         android:gravity="center"
+        android:textColor="@color/select_text_color"
         android:background="@drawable/picture_selected"
         android:id="@+id/tv_check"
         >

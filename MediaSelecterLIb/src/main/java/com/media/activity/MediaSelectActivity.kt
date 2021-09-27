@@ -19,4 +19,5 @@ class MediaSelectActivity: MyBaseActivity<ActivityMediaSelectBinding, MediaSelec
     override fun getModelInstance(): MediaSelectModel {
        return MediaSelectModel(binding,this)
     }
+
 }
