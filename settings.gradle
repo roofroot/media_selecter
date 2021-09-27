@@ -1,0 +1,3 @@
+rootProject.name = "MediaSelecter"
+include ':app'
+include ':MediaSelecterLIb'
