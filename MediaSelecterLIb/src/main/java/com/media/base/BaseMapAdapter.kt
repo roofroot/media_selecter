@@ -1,4 +1,4 @@
-package com.jiaoday.im.base
+package com.media.base
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

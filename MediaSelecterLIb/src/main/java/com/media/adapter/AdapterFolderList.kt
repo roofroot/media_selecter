@@ -4,7 +4,7 @@ import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.jiaoday.im.base.BaseAdapter
+import com.media.base.BaseAdapter
 import com.media.R
 import com.media.databinding.ItemFolderListBinding
 import com.media.entity.LocalMediaFolder

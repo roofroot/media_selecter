@@ -1,4 +1,4 @@
-package com.jiaoday.im.base
+package com.media.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.media.base.BaseModel
 
 abstract class BaseFragment<T : ViewBinding, M : BaseModel<*>> :
     Fragment() {

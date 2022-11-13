@@ -1,4 +1,4 @@
-package com.jiaoday.im.base
+package com.media.base
 
 import android.content.Intent
 import android.os.Bundle

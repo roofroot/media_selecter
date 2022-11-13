@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.jiaoday.im.base.BaseAdapter
+import com.media.base.BaseAdapter
 import com.media.R
 import com.media.config.PictureMimeType
 import com.media.databinding.ItemMediaListBinding

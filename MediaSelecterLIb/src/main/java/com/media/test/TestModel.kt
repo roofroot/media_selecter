@@ -5,7 +5,7 @@ import android.app.Activity
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.jiaoday.im.base.MyBaseModel
+import com.media.base.MyBaseModel
 import com.media.adapter.AdapterImageList
 import com.media.databinding.ActivityTestBinding
 import com.media.db.AlbumHelper

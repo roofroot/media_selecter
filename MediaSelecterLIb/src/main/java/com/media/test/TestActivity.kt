@@ -1,6 +1,6 @@
 package com.media.test
 
-import com.jiaoday.im.base.MyBaseActivity
+import com.media.base.MyBaseActivity
 import com.media.databinding.ActivityTestBinding
 
 /**

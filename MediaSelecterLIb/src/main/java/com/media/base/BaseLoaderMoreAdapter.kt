@@ -1,5 +1,4 @@
 package com.media.base
-
 import android.app.Activity
 import android.media.SoundPool
 import android.opengl.Visibility

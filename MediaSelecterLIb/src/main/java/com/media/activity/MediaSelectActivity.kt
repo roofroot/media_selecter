@@ -1,6 +1,6 @@
 package com.media.activity
 
-import com.jiaoday.im.base.MyBaseActivity
+import com.media.base.MyBaseActivity
 import com.media.databinding.ActivityMediaSelectBinding
 import com.media.model.MediaSelectModel
 

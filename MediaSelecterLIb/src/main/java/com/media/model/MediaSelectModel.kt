@@ -7,7 +7,7 @@ import android.os.Build
 import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.GridLayoutManager
-import com.jiaoday.im.base.MyBaseModel
+import com.media.base.MyBaseModel
 import com.media.R
 import com.media.adapter.AdapterImageList
 import com.media.databinding.ActivityMediaSelectBinding
