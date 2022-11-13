@@ -114,6 +114,7 @@ class MediaSelectModel(binding: ActivityMediaSelectBinding, context: Activity) :
                 folderMenuModel?.showMenu()
             }
         } else if(v.id == R.id.iv_close){
+             finishAnim()
             (binding.ivClose.drawable as AnimatedVectorDrawable).start()
         }
     }
